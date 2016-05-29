@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Converts normal, grammatically correct sentences into shorter, abbreviated ones typical in texting.">
+        <meta name="author" content="Text Speak">
+        <link rel="icon" href="assets/images/phone.png">
+        
+        <title>Text Speak</title>
+        
+        <script src="assets/js/redirect.js"></script>
+        
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+            <script src="assets/js/html5shiv.min.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <h1>Text Speak
+                <i class="fa fa-mobile-phone fa-lg" aria-hidden="true"></i>
+            </h1>
+            <div class="textarea">
+                <textarea id="from" class="form-control" rows="10" cols="50" placeholder="Type something to start translating..." autofocus="autofocus"></textarea>
+            </div>
+            <div class="textarea">
+                <textarea id="to" class="form-control" rows="10" cols="50" readonly="readonly"></textarea>
+            </div>
+            <br>
+            <button class="btn btn-default" data-clipboard-target="#to" data-toggle="tooltip" data-placement="bottom" data-trigger="manual">
+                <i class="fa fa-clipboard fa-lg fa-fw" aria-hidden="true"></i>
+            Copy output to clipboard</button>
+        </div>
+        
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/tether.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

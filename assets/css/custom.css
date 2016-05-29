@@ -1,0 +1,35 @@
+@font-face {
+    src: url("../fonts/CaviarDreams.ttf");
+    font-family: Caviar;
+}
+
+@font-face {
+    src: url("../fonts/JosefinSans.ttf");
+    font-family: Josefin;
+}
+
+body {
+    background-image: url("../images/background.png");
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: Caviar;
+    font-size: 48px;
+}
+
+.textarea {
+    display: inline-block;
+}
+
+#from, #to {
+    font-family: Josefin;
+    font-size: 16px;
+}
+
+button {
+    font-family: Caviar;
+}
