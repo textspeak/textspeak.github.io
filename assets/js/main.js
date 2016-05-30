@@ -1,7 +1,7 @@
 /*!
- * Please only continue reading if you understand and
- * do not mind that this code contains swear words which
- * may be offensive to some people.
+ * By continuing to read this code, you acknowledge
+ * that it contains terminology which some people
+ * may take offense to (e.g., swear words).
  */
 
 var clipboard = new Clipboard("button");
@@ -26,9 +26,10 @@ $("#from").on("input", function() {
         .replace(/\bby the way\b/g, "btw")
         .replace(/\bdo it yourself\b/g, "diy")
         .replace(/\belite\b/g, "1337")
-        .replace(/\bfor real\b/g, "fr")
-        .replace(/\bf(or the win|uck the world)\b/g, "ftw")
-        .replace(/\bfor your information\b/g, "fyi")
+        .replace(/\bfor/g, "4")
+        .replace(/\b4 real\b/g, "fr")
+        .replace(/\b(4 the win|fuck the world)\b/g, "ftw")
+        .replace(/\b4 your information\b/g, "fyi")
         .replace(/\bfrequently asked question(|s)\b/g, "faq")
         .replace(/\bgood\b/g, "gud")
         .replace(/\bgoodness\b/g, "gudness")
@@ -85,10 +86,13 @@ $("#from").on("input", function() {
         .replace(/\bthanks\b/g, "thx")
         .replace(/\bthank you\b/g, "ty")
         .replace(/\bthat\b/g, "dat")
+        .replace(/\bthats\b/g, "dats")
         .replace(/\bthe fuck\b/g, "tf")
+        .replace(/\bthese\b/g, "deez")
         .replace(/\bthis\b/g, "dis")
         .replace(/\bto be an(nounced|swered)\b/g, "tba")
-        .replace(/\bt(wo|o(|o))\b/g, "2")
+        .replace(/\btomorrow\b/g, "tmrw")
+        .replace(/\bto(o|)/g, "2")
         .replace(/\b2 much information\b/g, "tmi")
         .replace(/\bty very much\b/g, "tyvm")
         .replace(/\bwelcome back\b/g, "wb")
@@ -106,7 +110,20 @@ $("#from").on("input", function() {
         .replace(/\bu only live once\b/g, "yolo")
         .replace(/\byour(|e)\b/g, "ur")
     );
+    $("span").text($("#from").val().length - $("#to").val().length);
 });
+
+var tether = new Tether({
+    element: $("p")[0],
+    target: $("#to")[0],
+    attachment: "bottom right",
+    targetAttachment: "bottom right",
+    offset: "8px 8px"
+});
+
+setInterval(function() {
+    tether.position();
+}, 0);
 
 clipboard.on("success", function(event) {
     $("button").attr("data-original-title", "Copied!");
