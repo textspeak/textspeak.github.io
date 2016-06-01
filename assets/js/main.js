@@ -14,6 +14,7 @@ $("#from").on("input", function() {
         .replace(/\bare\b/g, "r")
         .replace(/\bas fuck\b/g, "af")
         .replace(/ate\b/g, "8")
+        .replace(/\bat the moment\b/g, "atm")
         .replace(/\baway from keyboard\b/g, "afk")
         .replace(/\bbabies\b/g, "bbys")
         .replace(/\bbaby\b/g, "bby")
@@ -31,12 +32,14 @@ $("#from").on("input", function() {
         .replace(/\b(4 the win|fuck the world)\b/g, "ftw")
         .replace(/\b4 your information\b/g, "fyi")
         .replace(/\bfrequently asked question(|s)\b/g, "faq")
+        .replace(/\bget\b/g, "git")
         .replace(/\bgood\b/g, "gud")
         .replace(/\bgoodness\b/g, "gudness")
         .replace(/\bgoods\b/g, "guds")
         .replace(/\b(got|have) to go\b/g, "gtg")
         .replace(/\bgud game\b/g, "gg")
         .replace(/\bgud job\b/g, "gj")
+        .replace(/\bgud night\b/g, "gn")
         .replace(/\bhave\b/g, "hav")
         .replace(/\bhav fun\b/g, "hf")
         .replace(/\bhow r you\b/g, "hru")
@@ -65,6 +68,7 @@ $("#from").on("input", function() {
         .replace(/\bo my g(od|udness)\b/g, "omg")
         .replace(/\bo my lord\b/g, "oml")
         .replace(/\bokay\b/g, "ok")
+        .replace(/\bon my way\b/g, "omw")
         .replace(/\bo(verpowered|riginal post(|er))\b/g, "op")
         .replace(/\bpeople\b/g, "ppl")
         .replace(/\bpeoples\b/g, "ppls")
@@ -92,7 +96,7 @@ $("#from").on("input", function() {
         .replace(/\bthis\b/g, "dis")
         .replace(/\bto be an(nounced|swered)\b/g, "tba")
         .replace(/\btomorrow\b/g, "tmrw")
-        .replace(/\bto(o|)/g, "2")
+        .replace(/\bto(o|)\b/g, "2")
         .replace(/\b2 much information\b/g, "tmi")
         .replace(/\bty very much\b/g, "tyvm")
         .replace(/\bwelcome back\b/g, "wb")
@@ -118,7 +122,7 @@ var tether = new Tether({
     target: $("#to")[0],
     attachment: "bottom right",
     targetAttachment: "bottom right",
-    offset: "8px 8px"
+    offset: "10px 10px"
 });
 
 setInterval(function() {
